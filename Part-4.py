@@ -25,9 +25,9 @@ while run:
     if userInput[pygame.K_RIGHT] and x < 500:
         x += vel_x
 
+    #Jump
     if jump is False and userInput[pygame.K_SPACE]:
         jump = True
-
     if jump is True:
         y -= vel_y*4
         vel_y -= 1
