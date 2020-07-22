@@ -13,9 +13,8 @@ run = True
 while run:
 
     win.fill((0, 0, 0))
-
     pygame.draw.circle(win, (255, 255, 255), (int(x), int(y)), radius)
-
+    
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             run = False
