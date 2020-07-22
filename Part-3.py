@@ -20,8 +20,8 @@ while run:
         if event.type == pygame.QUIT:
             run = False
 
+    # Movement
     userInput = pygame.key.get_pressed()
-
     if userInput[pygame.K_LEFT]:
         x -= vel
     if userInput[pygame.K_RIGHT]:
