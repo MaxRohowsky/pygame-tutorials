@@ -4,7 +4,7 @@ pygame.init()
 win = pygame.display.set_mode((500, 500))
 pygame.display.set_caption("First Game")
 
-x = 250
+x = 240
 y = 250
 radius = 15
 vel = 10
