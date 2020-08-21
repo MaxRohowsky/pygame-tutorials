@@ -60,6 +60,10 @@ bullet_img = pygame.transform.scale(pygame.image.load(os.path.join("Bullets", "b
 background = pygame.transform.scale(pygame.image.load('desert_BG.png'), (win_width, win_height))
 # Tower
 tower = pygame.transform.scale(pygame.image.load('Tower.png'), (200,200))
+# Music/Sounds
+music = pygame.mixer.music.load('music.ogg')
+pop_sound = pygame.mixer.Sound('pop.ogg')
+pygame.mixer.music.play(-1)
 
 class Hero:
     def __init__(self, x, y):
@@ -125,7 +129,7 @@ class Hero:
             return -1
 
     def cooldown(self):
-        if self.cool_down_count >= 20:
+        if self.cool_down_count >= 10:
             self.cool_down_count = 0
         elif self.cool_down_count > 0:
             self.cool_down_count += 1
@@ -134,6 +138,7 @@ class Hero:
         self.hit()
         self.cooldown()
         if (userInput[pygame.K_f] and self.cool_down_count == 0):
+            pop_sound.play()
             bullet = Bullet(self.x, self.y, self.direction())
             self.bullets.append(bullet)
             self.cool_down_count = 1
@@ -215,6 +220,7 @@ class Enemy:
 
 # Draw Game
 def draw_game():
+    global tower_health, speed
     win.fill((0, 0, 0))
     win.blit(background, (0, 0))
     # Draw Player
@@ -239,6 +245,8 @@ def draw_game():
             player.alive = True
             player.lives = 1
             player.health = 30
+            tower_health = 2
+            speed = 2
     font = pygame.font.Font('freesansbold.ttf', 32)
     text = font.render('Lives: ' + str(player.lives) + ' | Tower Health: '+ str(tower_health) + ' |Kills: '+ str(kills), True, (0, 0, 0))
     win.blit(text, (150, 20))
@@ -252,11 +260,11 @@ player = Hero(250, 290)
 
 # Instance of Enemy-Class
 enemies = []
-speed = 3
+speed = 2
 kills = 0
 
 # Tower
-tower_health = 5
+tower_health = 2
 
 # Mainloop
 run = True
@@ -277,12 +285,16 @@ while run:
     player.move_hero(userInput)
     player.jump_motion(userInput)
 
+    # Tower Health
+    if tower_health == 0:
+        player.alive = False
+
     # Enemy
     if len(enemies) == 0:
         enemy = Enemy(750, 300, speed)
         enemies.append(enemy)
         if speed <= 10:
-            speed += 1
+            speed += 0.25
     for enemy in enemies:
         enemy.move()
         if enemy.off_screen() or enemy.health == 0:
