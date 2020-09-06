@@ -5,22 +5,22 @@ pygame.init()
 win = pygame.display.set_mode((500, 500))
 
 # Load Images of the Character (there are two popular ways)
-stationary = pygame.image.load(os.path.join("Hero", "standing.png"))
+stationary = pygame.image.load(os.path.join("Assets/Hero", "standing.png"))
 # One way to do it - using the sprites that face left.
-left =  [pygame.image.load(os.path.join("Hero", "L1.png")),
-         pygame.image.load(os.path.join("Hero", "L2.png")),
-         pygame.image.load(os.path.join("Hero", "L3.png")),
-         pygame.image.load(os.path.join("Hero", "L4.png")),
-         pygame.image.load(os.path.join("Hero", "L5.png")),
-         pygame.image.load(os.path.join("Hero", "L6.png")),
-         pygame.image.load(os.path.join("Hero", "L7.png")),
-         pygame.image.load(os.path.join("Hero", "L8.png")),
-         pygame.image.load(os.path.join("Hero", "L9.png"))
-         ]
+left =  [pygame.image.load(os.path.join("Assets/Hero", "L1.png")),
+         pygame.image.load(os.path.join("Assets/Hero", "L2.png")),
+         pygame.image.load(os.path.join("Assets/Hero", "L3.png")),
+         pygame.image.load(os.path.join("Assets/Hero", "L4.png")),
+         pygame.image.load(os.path.join("Assets/Hero", "L5.png")),
+         pygame.image.load(os.path.join("Assets/Hero", "L6.png")),
+         pygame.image.load(os.path.join("Assets/Hero", "L7.png")),
+         pygame.image.load(os.path.join("Assets/Hero", "L8.png")),
+         pygame.image.load(os.path.join("Assets/Hero", "L9.png"))]
+
 # Another (faster) way to do it - using the sprites that face right.
 right = [None]*10
 for picIndex in range(1,10):
-    right[picIndex-1] = pygame.image.load(os.path.join("Hero", "R" + str(picIndex) + ".png"))
+    right[picIndex-1] = pygame.image.load(os.path.join("Assets/Hero", "R" + str(picIndex) + ".png"))
     picIndex+=1
 
 

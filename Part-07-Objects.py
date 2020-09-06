@@ -8,28 +8,28 @@ win_width = 800
 win = pygame.display.set_mode((win_width, win_height))
 
 # Load and Size Images
-stationary = pygame.image.load(os.path.join("Hero", "standing.png"))
-left = [pygame.image.load(os.path.join("Hero", "L1.png")),
-        pygame.image.load(os.path.join("Hero", "L2.png")),
-        pygame.image.load(os.path.join("Hero", "L3.png")),
-        pygame.image.load(os.path.join("Hero", "L4.png")),
-        pygame.image.load(os.path.join("Hero", "L5.png")),
-        pygame.image.load(os.path.join("Hero", "L6.png")),
-        pygame.image.load(os.path.join("Hero", "L7.png")),
-        pygame.image.load(os.path.join("Hero", "L8.png")),
-        pygame.image.load(os.path.join("Hero", "L9.png"))
+stationary = pygame.image.load(os.path.join("Assets/Hero", "standing.png"))
+left = [pygame.image.load(os.path.join("Assets/Hero", "L1.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L2.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L3.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L4.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L5.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L6.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L7.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L8.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L9.png"))
         ]
-right =[pygame.image.load(os.path.join("Hero", "R1.png")),
-        pygame.image.load(os.path.join("Hero", "R2.png")),
-        pygame.image.load(os.path.join("Hero", "R3.png")),
-        pygame.image.load(os.path.join("Hero", "R4.png")),
-        pygame.image.load(os.path.join("Hero", "R5.png")),
-        pygame.image.load(os.path.join("Hero", "R6.png")),
-        pygame.image.load(os.path.join("Hero", "R7.png")),
-        pygame.image.load(os.path.join("Hero", "R8.png")),
-        pygame.image.load(os.path.join("Hero", "R9.png"))
+right =[pygame.image.load(os.path.join("Assets/Hero", "R1.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R2.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R3.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R4.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R5.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R6.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R7.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R8.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R9.png"))
         ]
-background = pygame.transform.scale(pygame.image.load('desert_BG.png'), (win_width, win_height))
+background = pygame.transform.scale(pygame.image.load(os.path.join("Assets", "Background.png")), (win_width, win_height))
 
 class Hero:
     def __init__(self, x, y):

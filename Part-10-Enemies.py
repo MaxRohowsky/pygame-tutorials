@@ -10,55 +10,57 @@ win = pygame.display.set_mode((win_width, win_height))
 
 # Load and Size Images
 # Hero (Player)
-left = [pygame.image.load(os.path.join("Hero", "L1.png")),
-        pygame.image.load(os.path.join("Hero", "L2.png")),
-        pygame.image.load(os.path.join("Hero", "L3.png")),
-        pygame.image.load(os.path.join("Hero", "L4.png")),
-        pygame.image.load(os.path.join("Hero", "L5.png")),
-        pygame.image.load(os.path.join("Hero", "L6.png")),
-        pygame.image.load(os.path.join("Hero", "L7.png")),
-        pygame.image.load(os.path.join("Hero", "L8.png")),
-        pygame.image.load(os.path.join("Hero", "L9.png"))
+left = [pygame.image.load(os.path.join("Assets/Hero", "L1.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L2.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L3.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L4.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L5.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L6.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L7.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L8.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "L9.png"))
         ]
-right =[pygame.image.load(os.path.join("Hero", "R1.png")),
-        pygame.image.load(os.path.join("Hero", "R2.png")),
-        pygame.image.load(os.path.join("Hero", "R3.png")),
-        pygame.image.load(os.path.join("Hero", "R4.png")),
-        pygame.image.load(os.path.join("Hero", "R5.png")),
-        pygame.image.load(os.path.join("Hero", "R6.png")),
-        pygame.image.load(os.path.join("Hero", "R7.png")),
-        pygame.image.load(os.path.join("Hero", "R8.png")),
-        pygame.image.load(os.path.join("Hero", "R9.png"))
+right =[pygame.image.load(os.path.join("Assets/Hero", "R1.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R2.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R3.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R4.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R5.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R6.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R7.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R8.png")),
+        pygame.image.load(os.path.join("Assets/Hero", "R9.png"))
         ]
 # Enemy
-left_enemy = [pygame.image.load(os.path.join("Enemy", "L1E.png")),
-        pygame.image.load(os.path.join("Enemy", "L2E.png")),
-        pygame.image.load(os.path.join("Enemy", "L3E.png")),
-        pygame.image.load(os.path.join("Enemy", "L4E.png")),
-        pygame.image.load(os.path.join("Enemy", "L5E.png")),
-        pygame.image.load(os.path.join("Enemy", "L6E.png")),
-        pygame.image.load(os.path.join("Enemy", "L7E.png")),
-        pygame.image.load(os.path.join("Enemy", "L8E.png")),
-        pygame.image.load(os.path.join("Enemy", "L9P.png")),
-        pygame.image.load(os.path.join("Enemy", "L10P.png")),
-        pygame.image.load(os.path.join("Enemy", "L11P.png"))
+left_enemy = [pygame.image.load(os.path.join("Assets/Enemy", "L1E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "L2E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "L3E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "L4E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "L5E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "L6E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "L7E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "L8E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "L9P.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "L10P.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "L11P.png"))
         ]
-right_enemy = [pygame.image.load(os.path.join("Enemy", "R1E.png")),
-        pygame.image.load(os.path.join("Enemy", "R2E.png")),
-        pygame.image.load(os.path.join("Enemy", "R3E.png")),
-        pygame.image.load(os.path.join("Enemy", "R4E.png")),
-        pygame.image.load(os.path.join("Enemy", "R5E.png")),
-        pygame.image.load(os.path.join("Enemy", "R6E.png")),
-        pygame.image.load(os.path.join("Enemy", "R7E.png")),
-        pygame.image.load(os.path.join("Enemy", "R8E.png")),
-        pygame.image.load(os.path.join("Enemy", "R9P.png")),
-        pygame.image.load(os.path.join("Enemy", "R10P.png")),
-        pygame.image.load(os.path.join("Enemy", "R11P.png"))
+right_enemy = [pygame.image.load(os.path.join("Assets/Enemy", "R1E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "R2E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "R3E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "R4E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "R5E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "R6E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "R7E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "R8E.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "R9P.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "R10P.png")),
+        pygame.image.load(os.path.join("Assets/Enemy", "R11P.png"))
         ]
 # Bullet
-bullet_img = pygame.transform.scale(pygame.image.load(os.path.join("Bullets", "bullet.png")), (10, 10))
+bullet_img = pygame.transform.scale(pygame.image.load(os.path.join("Assets/Bullets", "light_bullet.png")), (10, 10))
 # Background
-background = pygame.transform.scale(pygame.image.load('desert_BG.png'), (win_width, win_height))
+background = pygame.transform.scale(pygame.image.load(os.path.join("Assets", "Background.png")), (win_width, win_height))
+
+
 
 
 class Hero:

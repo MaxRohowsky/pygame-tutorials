@@ -1,8 +1,9 @@
 import pygame
+import os
 
 pygame.init()
 win = pygame.display.set_mode((1000, 500))
-bg_img = pygame.image.load('INSERT NAME OF YOUR BACKGROUND IMAGE')
+bg_img = pygame.image.load(os.path.join("Assets","Background.png"))
 bg = pygame.transform.scale(bg_img, (1000, 500))
 
 width = 1000
